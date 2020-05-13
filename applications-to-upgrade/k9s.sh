@@ -2,7 +2,6 @@
 set -Eeuo pipefail
 
 readonly CURRENT_DIR=${1:-$(pwd)/..}
-echo $CURRENT_DIR
 readonly temp_folder=k9s_extr
 readonly package_name=k9s_Linux_x86_64.tar.gz
 
