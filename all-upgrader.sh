@@ -24,6 +24,8 @@ for app in $applications
 do
   echo "======================================================"
   echo "Update $app"
+  echo ""
+  echo ""
   $app $CURRENT_DIR
   echo "======================================================"
   echo ""
