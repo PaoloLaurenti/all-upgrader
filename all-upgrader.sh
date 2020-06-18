@@ -12,7 +12,8 @@ while [ -h "$source" ]; do # resolve $source until the file is no longer a symli
 done
 readonly CURRENT_DIR="$( cd -P "$( dirname "$source" )" >/dev/null 2>&1 && pwd )"
 
-sudo apt-get clean \
+sudo rm -rf /var/lib/apt/lists/* \
+&& sudo apt-get clean \
 && sudo apt-get update \
 && sudo apt-get dist-upgrade \
 && sudo apt-get autoremove 
