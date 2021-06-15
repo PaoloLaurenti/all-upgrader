@@ -27,6 +27,6 @@ tar zxf $package_name_path -C "$extr_folder_path/"
 sudo mkdir -p $dest_folder_path
 sudo rm -fr "$dest_folder_path/app"
 sudo mv -f "$extr_folder_path/Postman/app" $dest_folder_path
-sudo rm -fr /usr/local/bin/postman && sudo ln -sv "$dest_folder_path/app/Postman" /usr/local/bin/postman
+sudo rm -fr /usr/bin/postman && sudo ln -sv "$dest_folder_path/app/Postman" /usr/bin/postman
 
 rm -fr $temp_folder_path
