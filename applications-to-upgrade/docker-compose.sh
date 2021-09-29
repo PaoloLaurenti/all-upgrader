@@ -11,7 +11,7 @@ readonly CURRENT_DIR="$( cd -P "$( dirname "$source" )" >/dev/null 2>&1 && pwd )
 
 readonly temp_folder=docker_compose_temp
 readonly package_name="docker-compose"
-readonly package_name_regex="^docker-compose-Linux-x86_64$"
+readonly package_name_regex="^docker-compose-linux-amd64$"
 readonly github_owner=docker
 readonly github_repo=compose
 readonly url_json_field_name=browser_download_url
