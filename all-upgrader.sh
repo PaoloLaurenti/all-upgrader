@@ -18,7 +18,7 @@ sudo rm -rf /var/lib/apt/lists/* \
 && sudo apt-get dist-upgrade \
 && sudo apt-get autoremove 
 
-sudo snap refresh 
+sudo killall snap-store & sudo snap refresh
 
 applications=$(ls -d $CURRENT_DIR/applications-to-upgrade/*)
 for app in $applications
