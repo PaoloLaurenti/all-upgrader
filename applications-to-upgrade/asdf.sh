@@ -11,7 +11,9 @@ readonly CURRENT_DIR="$(cd -P "$(dirname "$source")" >/dev/null 2>&1 && pwd)"
 
 if command -v asdf &>/dev/null; then
   # UPDATE INSTALLATION
-  asdf update
+  cd ~/.asdf
+  git checkout "$(git describe --abbrev=0 --tags)"
+  cd $CURRENT_DIR
 else
   # FIRST INSTALLATION
   git clone https://github.com/asdf-vm/asdf.git ~/.asdf
