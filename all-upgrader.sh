@@ -20,7 +20,7 @@ sudo rm -rf /var/lib/apt/lists/* \
 
 sudo killall snap-store & sudo snap refresh
 
-applications=$(ls -d $CURRENT_DIR/applications-to-upgrade/*)
+applications=$(ls -d $CURRENT_DIR/applications-to-upgrade/*.sh)
 for app in $applications
 do
   echo "======================================================"
