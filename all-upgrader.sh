@@ -15,8 +15,8 @@ readonly CURRENT_DIR="$( cd -P "$( dirname "$source" )" >/dev/null 2>&1 && pwd )
 sudo rm -rf /var/lib/apt/lists/* \
 && sudo apt-get clean \
 && sudo apt-get update \
-&& sudo apt-get dist-upgrade \
-&& sudo apt-get autoremove 
+&& sudo apt-get dist-upgrade -y \
+&& sudo apt-get autoremove -y
 
 sudo killall snap-store & sudo snap refresh
 
