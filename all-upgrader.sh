@@ -12,15 +12,15 @@ while [ -h "$source" ]; do # resolve $source until the file is no longer a symli
 done
 readonly CURRENT_DIR="$( cd -P "$( dirname "$source" )" >/dev/null 2>&1 && pwd )"
 
-sudo rm -rf /var/lib/apt/lists/* \
-&& sudo apt-get clean \
-&& sudo apt-get update \
-&& sudo apt-get dist-upgrade -y \
-&& sudo apt-get autoremove -y
+# sudo rm -rf /var/lib/apt/lists/* \
+# && sudo apt-get clean \
+# && sudo apt-get update \
+# && sudo apt-get dist-upgrade -y \
+# && sudo apt-get autoremove -y
 
-sudo killall snap-store & sudo snap refresh
+# sudo killall snap-store & sudo snap refresh
 
-applications=$(ls -d $CURRENT_DIR/applications-to-upgrade/*.sh)
+applications=$(ls -d $CURRENT_DIR/applications-to-upgrade/git*.sh)
 for app in $applications
 do
   echo "======================================================"
