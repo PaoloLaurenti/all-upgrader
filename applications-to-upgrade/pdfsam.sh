@@ -29,6 +29,8 @@ mkdir -p $destination_path
 
 $CURRENT_DIR/../core/github-package-retriever-by-assets.sh $github_owner $github_repo $package_name_regex $url_json_field_name $package_name_path
 tar zxf $package_name_path -C "$extr_folder_path/"
+sudo rm -fr /usr/local/pdfsam* || true
+sudo rm -fr /usr/local/bin/pdfsam* || true
 sudo mv -f $extr_folder_path/pdfsam* /usr/local
 sudo ln -s /usr/local/pdfsam*/bin/pdfsam.sh /usr/local/bin
 
